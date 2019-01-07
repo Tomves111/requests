@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import requests
+import json
+
+BASE_URL = "http://100.65.132.129:11087"
+
+response = requests.get(BASE_URL + "/api/build/getversion")
+
+print(response)
+print(response.text)
+print(response.json())
+print("version is : `" + response.json()["version"] + "`")
