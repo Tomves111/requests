@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import requests
+import json
+
+BASE_URL = "http://100.65.132.129:11087"
+
+t  = requests.post(BASE_URL + '/evcharginginfoapi/send_receipt', json = { "cardNumber": "9626", "email": "tvesely@foxconndrc.com" })
+
+p = requests.get(BASE_URL + '/evcharginginfoapi/send_receipt')
+
+print(t)
+print(p)
