@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import requests
+import json
+
+BASE_URL = "http://100.65.132.129:11087"
+r = requests.post(BASE_URL + '/api/user', json = {"userName": "TL", "password": "a",  "name": "Jan",
+  "middlename": "string",
+  "lastname": "Novak",
+  "email": "aaa@foxconndrc.com",
+  "phone": "string",
+  "providerName": "foxconnDRC",
+  "roles": [
+    "Virtual powerplant operator (FoxconnDRC)"
+  ]
+})
+
+q = requests.get(BASE_URL + '/api/user')
+
+print(r)
+print(q)
+
